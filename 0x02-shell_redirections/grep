@@ -1,0 +1,18 @@
+-rwxrw-r-- 1 vagrant vagrant   44 Feb  2 15:52 12-newest_files
+-rw-rw-r-- 1 vagrant vagrant   12 Feb  2 15:52 13-unique
+-rw-rw-r-- 1 vagrant vagrant  168 Feb  2 15:48 list
+-rwxrw-r-- 1 vagrant vagrant   47 Feb  2 15:15 11-directories
+-rwxrw-r-- 1 vagrant vagrant   40 Feb  2 14:32 6-third_line
+-rwxrw-r-- 1 vagrant vagrant   51 Feb  2 14:02 10-no_more_js
+-rwxrw-r-- 1 vagrant vagrant   28 Feb  2 12:52 1-confused_smiley
+-rwxrw-r-- 1 vagrant vagrant   28 Feb  2 12:52 2-hellofile
+-rwxrw-r-- 1 vagrant vagrant   43 Feb  2 12:49 9-duplicate_last_line
+-rwxrw-r-- 1 vagrant vagrant   37 Feb  2 12:49 8-cwd_state
+-rwxrwxrwx 1 vagrant vagrant  102 Feb  2 12:49 7-file
+-rwxrw-r-- 1 vagrant vagrant   35 Feb  2 12:49 5-firstlines
+-rwxrw-r-- 1 vagrant vagrant   35 Feb  2 12:49 4-lastlines
+-rwxrw-r-- 1 vagrant vagrant   39 Feb  2 12:49 3-twofiles
+-rwxrw-r-- 1 vagrant vagrant   32 Feb  2 12:48 0-hello_world
+-rw-rw-r-- 1 vagrant vagrant 1025 Feb  2 04:08 iacta
+-rw-rw-r-- 1 vagrant vagrant   10 Feb  2 02:36 \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:)
+-rw-rw-r-- 1 vagrant vagrant   88 Feb  2 01:02 README.md
