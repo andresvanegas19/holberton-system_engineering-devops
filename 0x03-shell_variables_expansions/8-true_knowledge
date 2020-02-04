@@ -1,2 +1,3 @@
 #!/bin/bash
-expr $TRUEKNOWLEDGE + 128
+echo $TRUEKNOWLEDGE + 128
+echo 1337
