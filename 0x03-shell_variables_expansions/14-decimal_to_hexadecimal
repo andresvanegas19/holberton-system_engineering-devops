@@ -1,0 +1,2 @@
+#!/bin/bash
+echo DECIMAL=$(printf '%X\n' $DECIMAL) | tr -d 'DECIMAL='
