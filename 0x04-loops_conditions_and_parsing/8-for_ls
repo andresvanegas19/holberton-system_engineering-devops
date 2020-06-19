@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# The content of the current directory, In a list format
+
+for i in *
+do
+     file="${i:2}"
+     echo $file
+#    echo "$i"
+done
