@@ -2,5 +2,13 @@
 # displays numbers from 1 to 100 with fizz buzz
 
 for i in {1..100}; do
-     echo "$i"
+     if [[ $((i % 3)) -eq 0 && $((i % 5)) -eq 0 ]]; then
+          echo "FizzBuzz"
+     elif [ $((i % 3)) -eq 0 ]; then
+          echo "Fizz"
+     elif [ $((i % 5)) -eq 0 ]; then
+          echo "Buzz"
+     else
+          echo "$i"
+     fi
 done

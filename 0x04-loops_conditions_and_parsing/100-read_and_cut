@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays the content of the file /etc/passwd
+
+i=0
+for _ in "$(cat /etc/passwd)"; do
+:     $((i += 1))
+
+done
