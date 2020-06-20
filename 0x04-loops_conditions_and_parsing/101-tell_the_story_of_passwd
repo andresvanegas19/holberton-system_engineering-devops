@@ -2,12 +2,12 @@
 # displays the content of the file /etc/passwd with a great history
 
 while read -r etc_psswd; do
-     name=$(echo $etc_psswd | cut -d ':' -f 1)
-     psswd=$(echo $etc_psswd | cut -d ':' -f 2)
-     id=$(echo $etc_psswd | cut -d ':' -f 3)
-     group_id=$(echo $etc_psswd | cut -d ':' -f 4)
-     us_id=$(echo $etc_psswd | cut -d ':' -f 5)
-     home=$(echo $etc_psswd | cut -d ':' -f 6)
-     cmd_shell=$(echo $etc_psswd | cut -d ':' -f 7)
+     name=$(echo "$etc_psswd" | cut -d ':' -f 1)
+     psswd=$(echo "$etc_psswd" | cut -d ':' -f 2)
+     id=$(echo "$etc_psswd" | cut -d ':' -f 3)
+     group_id=$(echo "$etc_psswd" | cut -d ':' -f 4)
+     us_id=$(echo "$etc_psswd" | cut -d ':' -f 5)
+     home=$(echo "$etc_psswd" | cut -d ':' -f 6)
+     cmd_shell=$(echo "$etc_psswd" | cut -d ':' -f 7)
      echo "Format: The user $name is part of the $group_id gang, lives in $home and rides $cmd_shell. $id place is protected by the passcode $psswd, more info about the user here: $us_id"
 done < "/etc/passwd"
