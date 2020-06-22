@@ -2,12 +2,6 @@
 # displays the PID, along with the process name,
 # of processes whose name contain the word bash
 
-ps aux -A --forest | while read a; do
-     line=$a
-     if [[ $line == *"bash"* ]]; then
-          # xargs is for remove trailing spaces
-          pid=$(echo "$line" | cut -d ' ' -f 3-4 | xargs)
-          echo "$pid $(ps -p "$pid" -o comm=)"
-     fi
-
+pgrep -f bash | while read pid; do
+     echo "$pid $(ps -p "$pid" -o comm=)"
 done
