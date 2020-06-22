@@ -1,14 +1,6 @@
 #!/usr/bin/env bash
 # kills 4-to_infinity_and_beyond process
 
-ps aux -A --forest | while read a; do
-     line=$a
-     if [[ $line == *"4-to_infinity_and_beyond"* ]]; then
-          # xargs is for remove trailing spaces
-          pid=$(echo "$line" | cut -d ' ' -f 3-4 | xargs)
-          kill "$pid"
-          break
-     fi
-# pgrep -f ./4-to_infinity_and_beyond
+pgrep -f ./4-to_infinity_and_beyond | while read pid; do
+     kill "$pid"
 done
-
