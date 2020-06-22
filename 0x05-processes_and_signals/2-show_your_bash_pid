@@ -4,9 +4,9 @@
 
 
 ps aux -A --forest | while read a; do
-     echo "------------------------------"
-     echo "$a"
-     echo "$a" | cut -d ' ' -f 30-
-     echo "------------------------------"
+     line=$a
+     if [[ $line == *"bash"* ]]; then
+          echo "$line"
+     fi
 
 done
