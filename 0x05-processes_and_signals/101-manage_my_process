@@ -1,8 +1,27 @@
 #!/usr/bin/env bash
-# running in the background and is a daemons
+# that manages manage_my_process
 
-touch /tmp/my_process
-while true; do
-     echo "I am alive!" >> /tmp/my_process
-     sleep 2
-done
+if [ "$1" = "start" ]; then
+     touch /var/run/my_process.pid;
+     pgrep -f manage_my_process | while read pid; do
+          echo "$pid" > /var/run/my_process.pid
+     done
+     ./manage_my_process &
+     echo "manage_my_process started"
+elif [ "$1" = "stop" ]; then
+     rm -rf /var/run/my_process.pid
+     echo "manage_my_process stopped"
+     pgrep -f manage_my_process | while read pid; do
+          kill "$pid"
+     done
+elif [ "$1" = "restart" ]; then
+     rm -rf /var/run/my_process.pid
+     touch /var/run/my_process.pid
+     ./manage_my_process &
+     pgrep -f manage_my_process | while read pid; do
+          echo "$pid" > /var/run/my_process.pid
+     done
+     echo "manage_my_process restarted"
+else
+     echo 'Usage: manage_my_process {start|stop|restart}'
+fi
