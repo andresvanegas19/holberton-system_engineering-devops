@@ -16,14 +16,16 @@ int infinite_while(void)
 }
 
 /**
- * process - is a simple function
- * @counter: is the times a process is created
+ * main - make the process
+ *
+ * Return: Always 0.
  */
-void process(int counter)
+int main(void)
 {
+	int counter = 0;
 	pid_t pId;
 
-	for (; counter > 0; counter--)
+	for (; counter < 5; counter++)
 	{
 		pId = fork();
 		if (pId > 0)
@@ -32,18 +34,6 @@ void process(int counter)
 			return;
 	}
 	infinite_while();
-}
-
-/**
- * main - make the process
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	int time_create = 5;
-
-	process(time_create);
 
 	return (0);
 }
