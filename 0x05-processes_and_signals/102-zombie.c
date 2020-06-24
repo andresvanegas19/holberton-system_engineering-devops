@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 /**
  * infinite_while - is an infinite a while
@@ -31,7 +32,7 @@ int main(void)
 		if (pId > 0)
 			printf("Zombie process created, PID: %d\n", pId);
 		else
-			return;
+			return (0);
 	}
 	infinite_while();
 
