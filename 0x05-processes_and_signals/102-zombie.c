@@ -23,15 +23,15 @@ void process(int counter)
 {
 	pid_t pId;
 
-	while (counter >= 0)
+	for (;counter > 0; counter--)
 	{
 		pId = fork();
-		if (pId < 1)
+		if (pId > 0)
+			printf("Zombie process created, PID: %d\n", pId);
+		else
 			return;
-		printf("Zombie process created, PID: %d\n", pId);
-		counter -= 1;
 	}
-
+	infinite_while();
 }
 
 /**
@@ -44,7 +44,6 @@ int main(void)
 	int time_create = 5;
 
 	process(time_create);
-	infinite_while();
 
 	return (0);
 }
