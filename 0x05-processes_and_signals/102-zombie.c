@@ -8,11 +8,11 @@
  */
 int infinite_while(void)
 {
-    while (1)
-    {
-        sleep(1);
-    }
-    return (0);
+	while (1)
+	{
+		sleep(1);
+	}
+	return (0);
 }
 
 /**
@@ -23,7 +23,7 @@ void process(int counter)
 {
 	pid_t pId;
 
-	for (;counter > 0; counter--)
+	for (; counter > 0; counter--)
 	{
 		pId = fork();
 		if (pId > 0)
