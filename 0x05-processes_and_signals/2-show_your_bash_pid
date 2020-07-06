@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# displays lines containing the bash word
+# shellcheck disable=SC2009
+
+
+ps aux -A --forest | while read a; do
+     line=$a
+     if [[ $line == *"bash"* ]]; then
+          echo "$line"
+     fi
+
+done

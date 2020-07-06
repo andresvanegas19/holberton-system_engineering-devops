@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays the PID, along with the process name,
+# of processes whose name contain the word bash
+
+pgrep -f bash | while read pid; do
+     echo "$pid $(ps -p "$pid" -o comm=)"
+done

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays the content of the file /etc/passwd with a great history
+
+page='http://intranet-projects-files.s3.amazonaws.com/holbertonschool-sysadmin_devops/80/apache-access.log'
+curl page | while read -r etc_psswd; do
+     echo "$etc_psswd" | cut -d ':' -f 1,3,6
+
+done
