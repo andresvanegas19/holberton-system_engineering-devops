@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#  displays all active IPv4 IPs on the machine it’s executed on
+
+ip -4 addr > temp
+
+while IFS= read line; do
+     if [[ $line == *'inet'* ]]; then
+          echo "$line" | cut -d ' ' -f 2 | cut -d '/' -f 1
+     fi
+
+done < "temp"
+rm -f temp
