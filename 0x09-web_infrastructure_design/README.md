@@ -13,10 +13,10 @@ Network protocols are sets of established rules that dictate how to format, tran
 
 A set of cooperating network protocols is called a protocol suite. The TCP/IP suite includes numerous protocols across layers -- such as the data, network, transport and application layers -- working together to enable internet connectivity. These include:
 
-  + Transmission Control Protocol (TCP), which uses a set of rules to exchange messages with other internet points at the information packet level;
-  + User Datagram Protocol (UDP), which acts as an alternative communication protocol to TCP and is used to establish low-latency and loss-tolerating connections between applications and the Internet.
-  + Internet Protocol (IP), which uses a set of rules to send and receive messages at the Internet address level
-  + additional network protocols that include the Hypertext Transfer Protocol (HTTP) and File Transfer Protocol (FTP), each of which has defined sets of rules to exchange and display information.
++  + Transmission Control Protocol (TCP), which uses a set of rules to exchange messages with other internet points at the information packet level;
++  + User Datagram Protocol (UDP), which acts as an alternative communication protocol to TCP and is used to establish low-latency and loss-tolerating connections between applications and the Internet.
++  + Internet Protocol (IP), which uses a set of rules to send and receive messages at the Internet address level
++  + additional network protocols that include the Hypertext Transfer Protocol (HTTP) and File Transfer Protocol (FTP), each of which has defined sets of rules to exchange and display information.
   
 
 
