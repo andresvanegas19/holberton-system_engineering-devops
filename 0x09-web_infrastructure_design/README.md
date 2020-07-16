@@ -18,7 +18,7 @@ A set of cooperating network protocols is called a protocol suite. The TCP/IP su
 +  + Internet Protocol (IP), which uses a set of rules to send and receive messages at the Internet address level
 +  + additional network protocols that include the Hypertext Transfer Protocol (HTTP) and File Transfer Protocol (FTP), each of which has defined sets of rules to exchange and display information.
   
-Major types of network protocols
+Major types of network protocols </br>
 Generally speaking, networks have three types of protocols -- communication, such as Ethernet; management, such as the Simple Mail Transfer Protocol (SMTP); and security, such as Secure Shell (SSH).
 
 
