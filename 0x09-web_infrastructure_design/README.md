@@ -55,3 +55,13 @@ TCP/IP, or the Transmission Control Protocol/Internet Protocol, is a suite of co
 
 + What is an Internet Protocol (IP) port?
 
+
+
+
+
+
+# RESOURCE:
+- https://searchnetworking.techtarget.com/definition/protocol
+- https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm
+- https://searchnetworking.techtarget.com/definition/TCP-IP
+- https://www.lifewire.com/port-numbers-on-computer-networks-817939
