@@ -103,15 +103,19 @@ Typical servers are database servers:
 
 
 # Web Server
+## virtual machine 
+is an emulation of a computer system. Virtual machines are based on computer architectures and provide functionality of a physical computer. Their implementations may involve specialized hardware, software, or a combination.
 
+There are different kinds of virtual machines, each with different functions:
 
+- System virtual machines (also termed full virtualization VMs) provide a substitute for a real machine. They provide functionality needed to execute entire operating systems. A hypervisor uses native execution to share and manage hardware, allowing for multiple environments which are isolated from one another, yet exist on the same physical machine. Modern hypervisors use hardware-assisted virtualization, virtualization-specific hardware, primarily from the host CPUs.
+- Process virtual machines are designed to execute computer programs in a platform-independent environment.
+### What’s The Difference: Host vs. Guest OS?
+host operating systems run on hardware and guest operating systems run on a virtual machine.
 
+## containers 
 
-
-
-
-
-
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FWpnbGnzk08/0.jpg)](https://www.youtube.com/watch?v=FWpnbGnzk08)
 
 
 
@@ -133,3 +137,4 @@ Typical servers are database servers:
 - https://en.wikipedia.org/wiki/Web_server
 - https://whatis.techtarget.com/definition/Web-server
 - https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
+- https://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server#:~:text=While%20a%20web%20server%20handles,user%20and%20the%20displayed%20content.
