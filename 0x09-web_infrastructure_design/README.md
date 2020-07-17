@@ -121,6 +121,57 @@ A container consists of an entire runtime environment: an application, plus all 
 "Web server" can refer to hardware or software
 ![alt text](conection.png)
 
+# DNS
+A root domain is the parent domain to a sub domain, and its name is not, and can not be divided by a dot.
+
+### A record
+An A record maps a domain name to the IP address (Version 4) of the computer hosting the domain. An A record is used to find the IP address of a computer connected to the internet from a name.
+
+### CNAME redord
+A Canonical Name record (abbreviated as CNAME record) is a type of resource record in the Domain Name System (DNS) which maps one domain name (an alias) to another
+
+CNAME records must always point to another domain name, never directly to an IP address
+
+### MX record
+A TXT record (short for text record) is a type of resource record in the Domain name systemically[1] (DNS) used to provide the ability to associate arbitrary text with a host or other name, such as human readable information about a server, network, data center, or other accounting information.
+
+
+### TXT
+Un registro TXT (abreviatura de registro de texto ) es un tipo de registro de recursos en el Nombre de dominio sistémicamente [1] (DNS) utilizado para proporcionar la capacidad de asociar texto arbitrario con un host u otro nombre, como información legible por humanos sobre un servidor , red, centro de datos u otra información contable.
+
+## What Is Round Robin DNS?
+
+Round robin DNS is nothing but a simple technique of load balancing various Internet services such as Web server, e-mail server by creating multiple DNS A records with the same name.
+
+##  NS Record
+An NS record delegates a subdomain to a set of name servers. Whenever you delegate a domain to DNSimple, the TLD authorities place NS records for your domain in the TLD name servers pointing to us.
+
+## SOA record
+An SOA record is a Start of Authority. Every domain must have a Start of Authority record at the cutover point where the domain is delegated from its parent domain. 
+
+One of the reasons why you need www or some other subdomain has to do with a quirk of DNS and the CNAME record.
+
+Suppose for the purposes of this example that you are running a big site and contract out hosting to a CDN (Content Distribution Network) such as Akamai. What you typically do is set up the DNS record for your site as a CNAME to some akamai.com address. This gives the CDN the opportunity to supply an IP address that is close to the browser (in geographic or network terms). If you used an A record on your site, then you would not be able to offer this flexibility.
+
+# Load balancer
+Load balancer will distribute the work-load of your system to multiple individual systems, or group of systems to to reduce the amount of load on an individual system, which in turn increases the reliability, efficiency and availability of your enterprise application or website.
+
+
+![alt text](load-balancing.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
