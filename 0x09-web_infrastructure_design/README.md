@@ -1,6 +1,6 @@
 # Web infrastructure design - Notes
 ### stack
-![alt text](lamp.png)
+![alt text](img/lamp.png)
 
 
 # Network basics
