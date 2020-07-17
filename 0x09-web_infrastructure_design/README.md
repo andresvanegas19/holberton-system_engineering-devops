@@ -33,12 +33,12 @@ Dynamic IP addresses are issued using a leasing system, meaning that the IP addr
 
 ![alt text](ip-address-2.jpg)
 
-Cuatro reservas específicas incluyen lo siguiente:
+Four specific reservations include the following:
 
-+ + 0.0.0.0 : Esto representa la red predeterminada, que es el concepto abstracto de estar conectado a una red TCP / IP.
-+ + 255.255.255.255: esta dirección está reservada para transmisiones de red o mensajes que deben ir a todas las computadoras de la red.
-+ + 127.0.0.1 : Esto se denomina dirección de bucle invertido, lo que significa la forma en que su computadora se identifica, tenga o no una dirección IP asignada.
-+ + 169.254.0.1 a 169.254.255.254 : este es el rango de direcciones de direcciones IP privadas automáticas (APIPA) asignadas automáticamente cuando una computadora no consigue obtener una dirección de un servidor DHCP.
++ + 0.0.0.0 : This represents the default network, which is the abstract concept of being connected to a TCP/IP network.
++ + 255.255.255.255: this address is reserved for network transmissions or messages that must go to all computers on the network.
++ + 127.0.0.1 : This is called the inverted loop address, which means the way your computer identifies itself, whether or not it has an IP address assigned to it.
++ + 169.254.0.1 to 169.254.255.254 : This is the range of automatic private IP address (APIPA) addresses automatically assigned when a computer fails to obtain an address from a DHCP server.
 
 If you use a router to share an internet connection, the router gets the IP address issued directly from the ISP. Then, it creates and manages a subnet for all the computers connected to that router. If your computer's address falls into one of the reserved subnet ranges listed earlier, you're going through a router rather than connecting directly to the internet.
 
@@ -49,11 +49,77 @@ IP addresses on a subnet have two parts: network and node. The network part iden
 
 TCP/IP, or the Transmission Control Protocol/Internet Protocol, is a suite of communication protocols used to interconnect network devices on the internet. TCP/IP can also be used as a communications protocol in a private computer network (an intranet or an extranet).
 
+TCP defines how applications can create channels of communication across a network. It also manages how a message is assembled into smaller packets before they are then transmitted over the internet and reassembled in the right order at the destination address.
+
+IP defines how to address and route each packet to make sure it reaches the right destination. Each gateway computer on the network checks this IP address to determine where to forward the message.
+
+- HTTP (Protocolo de transferencia de hipertexto) maneja la comunicación entre un servidor web y un navegador web.
+- HTTPS (HTTP seguro) maneja la comunicación segura entre un servidor web y un navegador web.
+- FTP (Protocolo de transferencia de archivos) maneja la transmisión de archivos entre computadoras.
+
+### client-server model
+is a relationship in which one program (the client) requests a service or resource from another program (the server). 
+
+The differences between the TCP/IP model and the OSI model include the following:
+
+- TCP/IP uses just one layer (application) to define the functionalities of the upper layers, while the OSI model uses three layers (application, presentation and session).
+- The TCP/IP model uses one layer (link) to define the functionalities of the bottom layers, while the OSI uses two layers (physical and data link).
+- The TCP/IP model use the internet layer to define the routing standards and protocols, while OSI uses the network layer.
+- The TCP/IP header size is 20 bytes while the OSI header is 5 bytes.
+- The TCP/IP model is a protocol-oriented standard, whereas the OSI model is a generic model based on the functionalities of each layer.
+- TCP/IP follows a horizontal approach, while OSI follows a vertical approach.
+- In the TCP/IP suite, the protocols were developed first, and then the model was developed. In OSI, the model was developed first, and then the protocols in each layer were developed.
+- TCP/IP helps establish a connection between different types of computers, whereas the OSI model helps standardize routers, switches, motherboards and other hardware.
+
+
++ **What is an Internet Protocol (IP) port?**
+
+Port numbers allow different applications on the same computer to share network resources simultaneously.
+
+Port numbers relate to network addressing. In TCP/IP networking, both TCP and UDP use a set of ports that work together with IP addresses.
+
+These port numbers work like telephone extensions. Just as a business telephone switchboard can use the main phone number and assign each employee an extension number, a computer can have a main address and a set of port numbers to handle incoming and outgoing connections.
+
+
+# Server
+Servers are located in datacenters which are buildings that host hundreds, or even thousands of computers (servers). You can think of a server as a computer without a keyboard, mouse, or screen, that is accessible only by a network. A server can be physical or virtual. A server runs an OS (operating system).
+
+A single server can serve multiple clients, and a single client can use multiple servers.
+
+the request–response model: a client sends a request to the server, which performs some action and sends a response back to the client, typically with a result or acknowledgment. Designating a computer as "server-class hardware" implies that it is specialized for running servers on it. This often implies that it is more powerful and reliable than standard personal computers, but alternatively, large computing clusters may be composed of many relatively simple, replaceable server components.
+
+Typical servers are database servers:
+- file servers
+- mail servers
+- print servers
+- web servers
+- game servers
+- and application servers
+
+## what is the difference into server and webserver
+
+
+![alt text](server.png)
+
+
+# Web Server
+## virtual machine 
+is an emulation of a computer system. Virtual machines are based on computer architectures and provide functionality of a physical computer. Their implementations may involve specialized hardware, software, or a combination.
+
+There are different kinds of virtual machines, each with different functions:
+
+- System virtual machines (also termed full virtualization VMs) provide a substitute for a real machine. They provide functionality needed to execute entire operating systems. A hypervisor uses native execution to share and manage hardware, allowing for multiple environments which are isolated from one another, yet exist on the same physical machine. Modern hypervisors use hardware-assisted virtualization, virtualization-specific hardware, primarily from the host CPUs.
+- Process virtual machines are designed to execute computer programs in a platform-independent environment.
+### What’s The Difference: Host vs. Guest OS?
+host operating systems run on hardware and guest operating systems run on a virtual machine.
+
+## containers 
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FWpnbGnzk08/0.jpg)](https://www.youtube.com/watch?v=FWpnbGnzk08)
 
 
 
 
-+ What is an Internet Protocol (IP) port?
 
 
 
@@ -65,3 +131,10 @@ TCP/IP, or the Transmission Control Protocol/Internet Protocol, is a suite of co
 - https://computer.howstuffworks.com/internet/basics/what-is-an-ip-address.htm
 - https://searchnetworking.techtarget.com/definition/TCP-IP
 - https://www.lifewire.com/port-numbers-on-computer-networks-817939
+- https://en.wikipedia.org/wiki/Server_(computing)#Hardware_requirement
+- https://en.wikipedia.org/wiki/Virtual_machine
+- https://www.cio.com/article/2924995/what-are-containers-and-why-do-you-need-them.html
+- https://en.wikipedia.org/wiki/Web_server
+- https://whatis.techtarget.com/definition/Web-server
+- https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
+- https://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server#:~:text=While%20a%20web%20server%20handles,user%20and%20the%20displayed%20content.
