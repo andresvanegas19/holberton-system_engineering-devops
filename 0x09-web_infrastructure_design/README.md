@@ -1,4 +1,4 @@
-# Web infrastructure design
+# Web infrastructure design - Notes
 ### stack
 ![alt text](lamp.png)
 
@@ -100,6 +100,7 @@ Typical servers are database servers:
 
 
 ![alt text](server.png)
+![alt text](server2.png)
 
 
 # Web Server
@@ -173,7 +174,7 @@ Web stack monitoring can be broken down into 2 categories:
 
 
 # database
-
+A database is a collection of information that is organized so that it can be easily accessed, managed and updated. Computer databases typically contain aggregations of data records or files, containing information about sales transactions or interactions with specific customers.
 
 
 
