@@ -124,7 +124,7 @@ A container consists of an entire runtime environment: an application, plus all 
 # DNS
 A root domain is the parent domain to a sub domain, and its name is not, and can not be divided by a dot.
 
-### A record
+##  A record
 An A record maps a domain name to the IP address (Version 4) of the computer hosting the domain. An A record is used to find the IP address of a computer connected to the internet from a name.
 
 ### CNAME redord
@@ -160,7 +160,19 @@ Load balancer will distribute the work-load of your system to multiple individua
 ![alt text](load-balancing.png)
 
 
+### how to know server is about to overload?
 
+
+# Monitoring
+In the age of the data-ism, monitoring how our software systems are doing is an important thing.
+
+Web stack monitoring can be broken down into 2 categories:
+
+- Application monitoring: getting data about your running software and making sure it is behaving as expected
+- Server monitoring: getting data about your virtual or physical server and making sure they are not overloaded (could be CPU, memory, disk or network overload)
+
+
+# database
 
 
 
