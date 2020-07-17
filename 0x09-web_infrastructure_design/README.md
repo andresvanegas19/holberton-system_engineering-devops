@@ -113,12 +113,13 @@ There are different kinds of virtual machines, each with different functions:
 ### What’s The Difference: Host vs. Guest OS?
 host operating systems run on hardware and guest operating systems run on a virtual machine.
 
-## containers 
+## containers
+A container consists of an entire runtime environment: an application, plus all its dependencies, libraries and other binaries, and configuration files needed to run it, bundled into one package. By containerizing the application platform and its dependencies, differences in OS distributions and underlying infrastructure are abstracted away.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FWpnbGnzk08/0.jpg)](https://www.youtube.com/watch?v=FWpnbGnzk08)
 
-
-
+"Web server" can refer to hardware or software
+![alt text](conection.png)
 
 
 
