@@ -31,7 +31,7 @@ An IP address can be either dynamic or static. A static address is a permanently
 
 Dynamic IP addresses are issued using a leasing system, meaning that the IP address is only active for a limited time. If the lease expires, the computer will automatically request a new lease.
 
-![alt text](ip-address-2.jpg)
+![alt text](img/ip-address-2.jpg)
 
 Four specific reservations include the following:
 
@@ -99,8 +99,8 @@ Typical servers are database servers:
 ## what is the difference into server and webserver
 
 
-![alt text](server.png)
-![alt text](server2.png)
+![alt text](img/server.png)
+![alt text](img/server2.png)
 
 
 # Web Server
@@ -120,7 +120,7 @@ A container consists of an entire runtime environment: an application, plus all 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FWpnbGnzk08/0.jpg)](https://www.youtube.com/watch?v=FWpnbGnzk08)
 
 "Web server" can refer to hardware or software
-![alt text](conection.png)
+![alt text](img/conection.png)
 
 # DNS
 A root domain is the parent domain to a sub domain, and its name is not, and can not be divided by a dot.
@@ -158,7 +158,7 @@ Suppose for the purposes of this example that you are running a big site and con
 Load balancer will distribute the work-load of your system to multiple individual systems, or group of systems to to reduce the amount of load on an individual system, which in turn increases the reliability, efficiency and availability of your enterprise application or website.
 
 
-![alt text](load-balancing.png)
+![alt text](img/load-balancing.png)
 
 
 ### how to know server is about to overload?
