@@ -12,8 +12,10 @@
 ### System engineering & DevOps
 
 Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
-
-+ **What is a protocol**
+---
+---
+</br>
+# What is a protocol
 
 Network protocols are sets of established rules that dictate how to format, transmit and receive data so computer network devices -- from servers and routers to endpoints -- can communicate regardless of the differences in their underlying infrastructures, designs or standards. </br>
 A set of cooperating network protocols is called a protocol suite. The TCP/IP suite includes numerous protocols across layers -- such as the data, network, transport and application layers -- working together to enable internet connectivity. These include:
@@ -28,7 +30,7 @@ Generally speaking, networks have three types of protocols -- communication, suc
 
 
 
-+ **What is an IP address**
+# What is an IP address
 
 Every machine on a network has a unique identifier. Just as you would address a letter to send in the mail, computers use the unique identifier to send data to specific computers on a network. Most networks today, including all computers on the internet, use the TCP/IP protocol as the standard for how to communicate on the network. In the TCP/IP protocol, the unique identifier for a computer is called its IP address.
 
@@ -50,7 +52,7 @@ If you use a router to share an internet connection, the router gets the IP addr
 IP addresses on a subnet have two parts: network and node. The network part identifies the subnet itself. The node, also called the host, is an individual piece of computer equipment connected to the network and requiring a unique address. Each computer knows how to separate the two parts of the IP address by using a subnet mask. A subnet mask looks somewhat like an IP address, but it's actually just a filter used to determine which part of an IP address designates the network and node.
 
 
-+ **What is TCP/IPl**
+# What is TCP/IPl
 
 TCP/IP, or the Transmission Control Protocol/Internet Protocol, is a suite of communication protocols used to interconnect network devices on the internet. TCP/IP can also be used as a communications protocol in a private computer network (an intranet or an extranet).
 
@@ -77,7 +79,7 @@ The differences between the TCP/IP model and the OSI model include the following
 - TCP/IP helps establish a connection between different types of computers, whereas the OSI model helps standardize routers, switches, motherboards and other hardware.
 
 
-+ **What is an Internet Protocol (IP) port?**
+# What is an Internet Protocol (IP) port
 
 Port numbers allow different applications on the same computer to share network resources simultaneously.
 
