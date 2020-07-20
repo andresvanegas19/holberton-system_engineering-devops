@@ -2,10 +2,10 @@
 ### stack
 ![alt text](img/lamp.png)
 <p align="center">
-  <img width="460" height="300" src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/screen_1_1x.png">
+  <img  src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/screen_1_1x.png">
 </p>
 <p align="center">
-  <img width="460" height="300" src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/technology-stack-diagram.jpg">
+  <img src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/technology-stack-diagram.jpg">
 </p>
 
 
