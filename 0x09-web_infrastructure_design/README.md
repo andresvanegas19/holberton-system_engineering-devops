@@ -1,9 +1,7 @@
 # Web infrastructure design - Notes
 ### stack
 ![alt text](img/lamp.png)
-<p align="center">
-  <img  src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/screen_1_1x.png">
-</p>
+
 <p align="center">
   <img src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/technology-stack-diagram.jpg">
 </p>
@@ -206,7 +204,9 @@ Hyper Text Transfer Protocol Secure (HTTPS) is the secure version of HTTP, the p
 HTTPS pages typically use one of two secure protocols to encrypt communications - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both the TLS and SSL protocols use what is known as an 'asymmetric' Public Key Infrastructure (PKI) system. An asymmetric system uses two 'keys' to encrypt communications, a 'public' key and a 'private' key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa.
 
 
-
+<p align="center">
+  <img  src="https://github.com/andresvanegas19/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/img/screen_1_1x.png">
+</p>
 
 
 # RESOURCE:
