@@ -122,7 +122,12 @@ host operating systems run on hardware and guest operating systems run on a virt
 ## containers
 A container consists of an entire runtime environment: an application, plus all its dependencies, libraries and other binaries, and configuration files needed to run it, bundled into one package. By containerizing the application platform and its dependencies, differences in OS distributions and underlying infrastructure are abstracted away.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/FWpnbGnzk08/0.jpg)](https://www.youtube.com/watch?v=FWpnbGnzk08)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=FWpnbGnzk08">
+    <img src="https://img.youtube.com/vi/FWpnbGnzk08/0.jpg">
+  <a>
+</p>
+
 
 "Web server" can refer to hardware or software
 ![alt text](img/conection.png)
