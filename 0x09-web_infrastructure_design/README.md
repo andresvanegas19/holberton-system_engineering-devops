@@ -177,15 +177,26 @@ Web stack monitoring can be broken down into 2 categories:
 A database is a collection of information that is organized so that it can be easily accessed, managed and updated. Computer databases typically contain aggregations of data records or files, containing information about sales transactions or interactions with specific customers.
 
 
+In engineering, redundancy is the duplication of critical components or functions of a system with the intention of increasing reliability of the system, usually in the form of a backup or fail-safe, or to improve actual system performance, such as in the case of GNSS receivers, or multi-threaded computer processing.
+
+## Single point of failure (SPOF) 
+ is a part of a system that, if it fails, will stop the entire system from working.
+ 
+ In engineering, redundancy is the duplication of critical components or functions of a system with the intention of increasing reliability of the system, usually in the form of a backup or fail-safe, or to improve actual system performance, such as in the case of GNSS receivers, or multi-threaded computer processing.
 
 
+### Active-Active vs. Active-Passive High-Availability Clustering
+The principles of high availability (HA) are fairly standard, whether you are discussing enterprise storage, databases or any other form of HA. The basic premise is that, to maintain service in the event of unexpected component failures, you need to have at least two of everything. In the case of storage array HA, we are usually talking about the storage controllers which are the interfaces between the outside world and the persistent media on which data resides.
+
+- In a basic active/passive design, one controller (A) handles all traffic while the other (B) simply sits there waiting for its moment of glory. That moment comes when A suffers some kind of failure – and B then leaps into action, immediately replacing A by providing the same service. There might be a minor delay as the system performs a failover, but with multipathing software in place it will usually be quick enough to go unnoticed.
+- In an active/active architecture, both controllers (A and B) are available to handle traffic. This means that under normal operation you now have 2P of performance – and all for the same price of ten groats. Both the overall performance and the price/performance have doubled.
+
+# HTTP - HTTPS
+
+Hyper Text Transfer Protocol Secure (HTTPS) is the secure version of HTTP, the protocol over which data is sent between your browser and the website that you are connected to. The 'S' at the end of HTTPS stands for 'Secure'. It means all communications between your browser and the website are encrypted. 
 
 
-
-
-
-
-
+HTTPS pages typically use one of two secure protocols to encrypt communications - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both the TLS and SSL protocols use what is known as an 'asymmetric' Public Key Infrastructure (PKI) system. An asymmetric system uses two 'keys' to encrypt communications, a 'public' key and a 'private' key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa.
 
 
 
