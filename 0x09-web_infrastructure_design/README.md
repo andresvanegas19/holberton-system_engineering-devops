@@ -104,8 +104,10 @@ Typical servers are database servers:
 - game servers
 - and application servers
 
-## what is the difference into server and webserver
+## What is the difference between application server and web server?
+if the query you want to run has already been done previously and no data has changed since then, the server will generate the results without having to send the request to the database server. This allows a real-time query where a second client can access the same info and receive real time, reliable information without sending another duplicate query to the database server. The server basically acts as an intermediate between the database server and the web server. This allows the information pulled to be reusable while in the first scenario, since this info is embedded in a particular and "customized" HTML page, this is not a reusable process. A second client will have to request the info again and receive another HTML embedded page with the info requested -highly inefficient. Not to mention that this type of server is very flexible due to its ability to manage its own resources, including security, transaction processing, messaging and resource pooling.
 
+To support such a variety of complex tasks this server must have a built in redundancy, great processing power and high amount of RAM to handle all the data it's pulling in real time.
 
 ![alt text](img/server.png)
 ![alt text](img/server2.png)
@@ -119,6 +121,7 @@ There are different kinds of virtual machines, each with different functions:
 
 - System virtual machines (also termed full virtualization VMs) provide a substitute for a real machine. They provide functionality needed to execute entire operating systems. A hypervisor uses native execution to share and manage hardware, allowing for multiple environments which are isolated from one another, yet exist on the same physical machine. Modern hypervisors use hardware-assisted virtualization, virtualization-specific hardware, primarily from the host CPUs.
 - Process virtual machines are designed to execute computer programs in a platform-independent environment.
+
 ### What’s The Difference: Host vs. Guest OS?
 host operating systems run on hardware and guest operating systems run on a virtual machine.
 
@@ -215,6 +218,8 @@ A database is a collection of information that is organized so that it can be ea
 
 
 In engineering, redundancy is the duplication of critical components or functions of a system with the intention of increasing reliability of the system, usually in the form of a backup or fail-safe, or to improve actual system performance, such as in the case of GNSS receivers, or multi-threaded computer processing.
+
+
 
 ## Single point of failure (SPOF) 
  is a part of a system that, if it fails, will stop the entire system from working.
