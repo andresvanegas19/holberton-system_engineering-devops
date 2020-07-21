@@ -12,7 +12,8 @@
 ### System engineering & DevOps
 
 Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
----
+
+
 ---
 </br>
 # What is a protocol
@@ -136,8 +137,11 @@ A container consists of an entire runtime environment: an application, plus all 
 
 # DNS
 A root domain is the parent domain to a sub domain, and its name is not, and can not be divided by a dot.
+DNS is an distributed system. To find an IP address of a given domain, you have to query one of the root servers first. However, not everyone needs to query root servers since most people use ISP hosted DNS server which does the resolving task on their behalf and caches the result.
 
-##  A record
+NS or name server records are used for recursively resolving the required domain name. NS records are used to tell the DNS resolver which DNS server is responsible for the given zone which is basically used to redirect the resolver to the DNS server hosting the next level domain.
+
+###  A record
 An A record maps a domain name to the IP address (Version 4) of the computer hosting the domain. An A record is used to find the IP address of a computer connected to the internet from a name.
 
 ### CNAME redord
@@ -153,18 +157,23 @@ A TXT record (short for text record) is a type of resource record in the Domain 
 Un registro TXT (abreviatura de registro de texto ) es un tipo de registro de recursos en el Nombre de dominio sistémicamente [1] (DNS) utilizado para proporcionar la capacidad de asociar texto arbitrario con un host u otro nombre, como información legible por humanos sobre un servidor , red, centro de datos u otra información contable.
 
 ## What Is Round Robin DNS?
-
 Round robin DNS is nothing but a simple technique of load balancing various Internet services such as Web server, e-mail server by creating multiple DNS A records with the same name.
 
-##  NS Record
-An NS record delegates a subdomain to a set of name servers. Whenever you delegate a domain to DNSimple, the TLD authorities place NS records for your domain in the TLD name servers pointing to us.
+###  NS Record
+An NS record delegates a subdomain to a set of name servers. Whenever you delegate a domain to DNSimple, the TLD authorities place NS records for your domain in the TLD name servers pointing to us. </br>
+NS or name server records are used for recursively resolving the required domain name. NS records are used to tell the DNS resolver which DNS server is responsible for the given zone which is basically used to redirect the resolver to the DNS server hosting the next level domain.
 
-## SOA record
+### SOA record
 An SOA record is a Start of Authority. Every domain must have a Start of Authority record at the cutover point where the domain is delegated from its parent domain. 
 
 One of the reasons why you need www or some other subdomain has to do with a quirk of DNS and the CNAME record.
 
 Suppose for the purposes of this example that you are running a big site and contract out hosting to a CDN (Content Distribution Network) such as Akamai. What you typically do is set up the DNS record for your site as a CNAME to some akamai.com address. This gives the CDN the opportunity to supply an IP address that is close to the browser (in geographic or network terms). If you used an A record on your site, then you would not be able to offer this flexibility.
+
+###  root domain and sub domain - differences
+The dot in the domain name delimits the sub domain name (the part of the name before the dot, eg. www.my.) and the root domain name ( the part after the dot, ie .domain.com). This means that the address my.domain.com is a sub domain of the root domain, whose name is domain.com
+
+In an administrator panel at domain provider account, you can create any number of sub domains. This means that for the root domain called domain.com it is possible to create different sub domains eg. my.domain.com, your.domain.com, holberton.domain.com… Creating multiple sub domains is always free and does not require you to set up new accounts on a domain provider website.
 
 # Load balancer
 Load balancer will distribute the work-load of your system to multiple individual systems, or group of systems to to reduce the amount of load on an individual system, which in turn increases the reliability, efficiency and availability of your enterprise application or website.
