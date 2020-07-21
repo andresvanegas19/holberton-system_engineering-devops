@@ -222,6 +222,19 @@ In engineering, redundancy is the duplication of critical components or function
 
 long as the MySQL database server allows the connections over the network, and they have the database credentials.
 
+### Log Shipping en SQL Server 
+Log Shipping is the process by which we Backup, Copy and Restore the transaction log from a Database located on one server to another server(s): Because in case of a failure in one of our servers, having these backups allows us to quickly recover our Databases in contingency servers
+
+we create a backup of our transaction log(s), copy it to a secondary server and in case of failure we lift this backup. But be careful, the process of lifting the secondary server is not done automatically, we must do it ourselves.
+
+1 Primary Database, 1 Primary Server, 1 Secondary Database, 1 Secondary Server and 1 Monitoring Server. The last one is optional, but it allows to manage more effectively the processes that are carried out.
+
+- Backup the Primary Database Transaction Log
+- Copy the backup made to the secondary server.
+- Restore the backup to the Secondary Database.
+
+
+
 ## Single point of failure (SPOF) 
  is a part of a system that, if it fails, will stop the entire system from working.
  
