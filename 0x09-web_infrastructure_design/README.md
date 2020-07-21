@@ -170,6 +170,8 @@ One of the reasons why you need www or some other subdomain has to do with a qui
 
 Suppose for the purposes of this example that you are running a big site and contract out hosting to a CDN (Content Distribution Network) such as Akamai. What you typically do is set up the DNS record for your site as a CNAME to some akamai.com address. This gives the CDN the opportunity to supply an IP address that is close to the browser (in geographic or network terms). If you used an A record on your site, then you would not be able to offer this flexibility.
 
+### En resumen, los registros NS se usan para redirigir el solucionador DNS al siguiente servidor DNS que aloja la zona del siguiente nivel. Y, el clúster de servidores DNS utiliza el registro SOA para sincronizar los últimos cambios del servidor maestro al servidor secundario.
+
 ###  root domain and sub domain - differences
 The dot in the domain name delimits the sub domain name (the part of the name before the dot, eg. www.my.) and the root domain name ( the part after the dot, ie .domain.com). This means that the address my.domain.com is a sub domain of the root domain, whose name is domain.com
 
@@ -237,3 +239,4 @@ HTTPS pages typically use one of two secure protocols to encrypt communications 
 - https://whatis.techtarget.com/definition/Web-server
 - https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
 - https://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server#:~:text=While%20a%20web%20server%20handles,user%20and%20the%20displayed%20content.
+- https://www.quora.com/What-is-the-difference-between-SOA-record-and-NS-record-Does-NS-record-help-the-resolver-to-identify-the-ipaddress-of-domain-without-requesting-the-root-server
