@@ -203,7 +203,10 @@ Load balancer will distribute the work-load of your system to multiple individua
 
 
 ### how to know server is about to overload?
-
+- Sudden spikes in site traffic. When too many people attempt to visit your web site at the same time, it can cause your server to become overload. An example of this is when concert tickets go on sale, and the web site crashes soon after. Spikes in traffic can be short-term, but the effects on your business’s reputation can linger.
+- One of your servers is completely unavailable. When one server is unavailable due to maintenance or sudden malfunction, the backup server can easily become overloaded while handling the extra traffic.
+- Computer viruses or worms. When a large-scale number of browsers or computers become infected by a virus or worm, it can cause abnormally high traffic patterns that disrupt normal server operation.
+- DoS or DDoS attacks. Denial-of-service or distributed-denial-of-service attacks are attacks launched by hackers for the purpose of making a server unavailable for its intended users. By flooding the net
 
 # Monitoring
 In the age of the data-ism, monitoring how our software systems are doing is an important thing.
