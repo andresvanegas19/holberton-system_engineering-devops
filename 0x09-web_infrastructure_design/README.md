@@ -220,7 +220,7 @@ A database is a collection of information that is organized so that it can be ea
 
 In engineering, redundancy is the duplication of critical components or functions of a system with the intention of increasing reliability of the system, usually in the form of a backup or fail-safe, or to improve actual system performance, such as in the case of GNSS receivers, or multi-threaded computer processing.
 
-
+long as the MySQL database server allows the connections over the network, and they have the database credentials.
 
 ## Single point of failure (SPOF) 
  is a part of a system that, if it fails, will stop the entire system from working.
