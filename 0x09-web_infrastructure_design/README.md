@@ -172,6 +172,20 @@ Suppose for the purposes of this example that you are running a big site and con
 
 ### When any record in the zone is updated, the SOA record serial number is incremented. This serial number is used by secondary name servers to know that the zone is updated and that the changes must be synced using zone transfer mechanism. Once the zone transfer is complete, all the secondary name servers will have same copy of the records.
 
+- A: especifica las direcciones IP correspondientes a su dominio y sus subdominios;
+- MX: especifica dónde se deben entregar los correos electrónicos de su dominio;
+- CNAME: especifica redirecciones de los subdominios de su dominio a otros dominios / subdominios;
+- TXT: estos registros se utilizan para almacenar información basada en texto relacionada con su dominio. Uno de sus usos más comunes es para datos SPF. SPF, o Sender Policy Framework, es un intento de controlar el correo electrónico falsificado.
+
+- SOA (Start Of Authority)
+- A (Address)
+- AAAA (IPv6 Address)
+- CNAME (Canonical Name)
+- NS (Name Server)
+- MX (Mail eXchanger)
+- TXT (TeXT)
+
+
 ###  root domain and sub domain - differences
 The dot in the domain name delimits the sub domain name (the part of the name before the dot, eg. www.my.) and the root domain name ( the part after the dot, ie .domain.com). This means that the address my.domain.com is a sub domain of the root domain, whose name is domain.com
 
