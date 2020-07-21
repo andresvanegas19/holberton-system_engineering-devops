@@ -170,7 +170,7 @@ One of the reasons why you need www or some other subdomain has to do with a qui
 
 Suppose for the purposes of this example that you are running a big site and contract out hosting to a CDN (Content Distribution Network) such as Akamai. What you typically do is set up the DNS record for your site as a CNAME to some akamai.com address. This gives the CDN the opportunity to supply an IP address that is close to the browser (in geographic or network terms). If you used an A record on your site, then you would not be able to offer this flexibility.
 
-### En resumen, los registros NS se usan para redirigir el solucionador DNS al siguiente servidor DNS que aloja la zona del siguiente nivel. Y, el clúster de servidores DNS utiliza el registro SOA para sincronizar los últimos cambios del servidor maestro al servidor secundario.
+### When any record in the zone is updated, the SOA record serial number is incremented. This serial number is used by secondary name servers to know that the zone is updated and that the changes must be synced using zone transfer mechanism. Once the zone transfer is complete, all the secondary name servers will have same copy of the records.
 
 ###  root domain and sub domain - differences
 The dot in the domain name delimits the sub domain name (the part of the name before the dot, eg. www.my.) and the root domain name ( the part after the dot, ie .domain.com). This means that the address my.domain.com is a sub domain of the root domain, whose name is domain.com
