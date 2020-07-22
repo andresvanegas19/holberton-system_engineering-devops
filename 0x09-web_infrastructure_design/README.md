@@ -231,6 +231,25 @@ In engineering, redundancy is the duplication of critical components or function
 
 long as the MySQL database server allows the connections over the network, and they have the database credentials.
 
+## database replication
+is the frequent electronic copying of data from a database in one computer or server to a database in another -- so that all users share the same level of information. The result is a distributed database in which users can quickly access data relevant to their tasks without interfering with the work of others. Numerous elements contribute to the overall process of creating and managing database replication.
+
+Database replication can either be a single occurrence or an ongoing process. It involves all data sources in an organization's distributed infrastructure. The organization's distributed management system is used to replicate and properly distribute the data amongst all the sources.
+
+Overall, distributed database management systems (DDBMS) work to ensure that changes, additions and deletions performed on the data at any given location are automatically reflected in the data stored at all the other locations. DDBMS is essentially the name of the infrastructure that allows or carries out database replication -- the system that manages the distributed database, which is the product of database replication.
+
+- Asynchronous replication is when the data is sent to the model server -- the server that the replicas take data from -- from the client. Then, the model server pings the client with confirmation saying the data has been received. From there, it goes about copying data to the replicas at an unspecified or monitored pace.
+- Synchronous replication is when data is copied from the client server to the model server and then replicated to all the replica servers before the client is notified that data has been replicated. This takes longer to verify than the asynchronous method, but it presents the advantage of knowing that all data was copied before proceeding.
+
+### Database replication vs. mirroring
+While data mirroring is sometimes positioned as an alternative approach to data replication, it is actually a form of data replication. In relational database mirroring, complete backups of databases are maintained for use in the case that the primary database fails. Mirrors, in effect, serve as hot standby databases. Data mirroring has found considerable use within the Microsoft SQL Server community.
+
+With database replication, the focus is usually on database scale out for queries -- requests for data. Database mirroring, in which log extracts form the basis for incremental database updates from the principal server, is typically implemented to provide hot standby or disaster recovery capabilities. Simply put, mirroring focuses on backing up what's there, and replication focuses on improving operational efficiency as a whole -- which involves maintaining secure data backups using mirroring.
+
+### Talend Open Studio for Data Integration
+One of the most prominent open source data integration products, it includes a large repertoire of resources for those just getting started with the software. Talend offers tutorials, demos and blog posts on topics like the use of metadata and best practices for data model design best practices. There is also a community of experienced users that new users can reach out to for tips on using Talend's data integration solution.
+
+
 ### Log Shipping en SQL Server 
 Log Shipping is the process by which we Backup, Copy and Restore the transaction log from a Database located on one server to another server(s): Because in case of a failure in one of our servers, having these backups allows us to quickly recover our Databases in contingency servers
 
@@ -282,3 +301,4 @@ HTTPS pages typically use one of two secure protocols to encrypt communications 
 - https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
 - https://stackoverflow.com/questions/936197/what-is-the-difference-between-application-server-and-web-server#:~:text=While%20a%20web%20server%20handles,user%20and%20the%20displayed%20content.
 - https://www.quora.com/What-is-the-difference-between-SOA-record-and-NS-record-Does-NS-record-help-the-resolver-to-identify-the-ipaddress-of-domain-without-requesting-the-root-server
+- https://searchdatamanagement.techtarget.com/definition/database-replication
