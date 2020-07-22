@@ -246,6 +246,14 @@ While data mirroring is sometimes positioned as an alternative approach to data 
 
 With database replication, the focus is usually on database scale out for queries -- requests for data. Database mirroring, in which log extracts form the basis for incremental database updates from the principal server, is typically implemented to provide hot standby or disaster recovery capabilities. Simply put, mirroring focuses on backing up what's there, and replication focuses on improving operational efficiency as a whole -- which involves maintaining secure data backups using mirroring.
 
+---
+
+Replication is the process by which one or more databases can be kept in sync with a single master database. We refer to the master database as the primary database and the replicants as the secondary databases.
+
+High availability refers to the ability to switch between the primary and secondary at will, so if the primary is suddenly unavailable (for whatever reason), the secondary can promoted to become the new primary.
+
+---
+
 ### Talend Open Studio for Data Integration
 One of the most prominent open source data integration products, it includes a large repertoire of resources for those just getting started with the software. Talend offers tutorials, demos and blog posts on topics like the use of metadata and best practices for data model design best practices. There is also a community of experienced users that new users can reach out to for tips on using Talend's data integration solution.
 
