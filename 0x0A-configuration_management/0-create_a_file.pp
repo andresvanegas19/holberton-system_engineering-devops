@@ -1,5 +1,5 @@
 file { '/tmp/holberton':
-  ensure  => present,
+  ensure  => file,
   path    => '/tmp/holberton',
   owner   => 'www-data',
   group   => 'www-data',
