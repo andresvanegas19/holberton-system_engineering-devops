@@ -1,0 +1,13 @@
+# var
+config='config'
+change_root="root \/var\/www\/leadering.tech\/html;"
+server_name="server_name leadering.tech .leadering.tech www.leadering.tech;"
+
+#find where change the file
+sudo sed -i -e "s/root \/var\/www\/html;/${change_root}/g" $config
+sudo sed -i -e "s/server_name _;/${server_name}/g" $config
+
+config='/etc/nginx/sites-available/leadering.tech'
+change_root="root \/var\/www\/leadering.tech\/html;"
+server_name="server_name leadering.tech .leadering.tech www.leadering.tech;"
+
