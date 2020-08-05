@@ -6,7 +6,7 @@ sudo apt-get -y install nginx
 # www is where virtual host site file stored
 # Setting Up The Site Files
 sudo mkdir -p /var/www/leadering.tech/html
-sudo chown -R $USER:$USER /var/www/leadering.tech/html
+sudo chown -R "$USER":"$USER" /var/www/leadering.tech/html
 sudo chmod -R 755 /var/www
 touch /var/www/leadering.tech/html/index.html
 echo "<h1>Follow your dreams<h1>" | sudo tee /var/www/leadering.tech/html/index.html
@@ -21,7 +21,7 @@ more_text="location = \/redirect_me {\nreturn 301 https:\/\/www.youtube.com\/wat
 server_name="server_name leadering.tech .leadering.tech www.leadering.tech;"
 
 #find where change the file
-sudo sed -i -e "s/root \/var\/www\/html;/${change_root}\n{more_text}/g" $config
+sudo sed -i -e "s/root \/var\/www\/html;/${change_root}\n${more_text}/g" $config
 sudo sed -i -e "s/server_name _;/${server_name}/g" $config
 
 # /etc/nginx/sites-available is where config file is stored
