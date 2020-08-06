@@ -1,32 +1,10 @@
 #!/usr/bin/env bash
 # Configure Nginx server so that /redirect_me is redirecting to another page.
-
+sudo apt-get -y update
 sudo apt-get -y install nginx
-
 # www is where virtual host site file stored
 # Setting Up The Site Files
-sudo mkdir -p /var/www/leadering.tech/html
-sudo chown -R "$USER":"$USER" /var/www/leadering.tech/html
-sudo chmod -R 755 /var/www
-touch /var/www/leadering.tech/html/index.html
-echo "<h1>Follow your dreams<h1>" | sudo tee /var/www/leadering.tech/html/index.html
-
-# Setting Up The Nginx Virtual Host Config File
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/leadering.tech.conf
-
-# var
-config='/etc/nginx/sites-available/leadering.tech.conf'
-change_root="root \/var\/www\/leadering.tech\/html;"
-more_text="location = \/redirect_me {\nreturn 301 https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ;\n}\n"
-server_name="server_name leadering.tech .leadering.tech www.leadering.tech;"
-
-#find where change the file
-sudo sed -i -e "s/root \/var\/www\/html;/${change_root}\n${more_text}/g" $config
-sudo sed -i -e "s/server_name _;/${server_name}/g" $config
-
-# /etc/nginx/sites-available is where config file is stored
-# /etc/nginx/sites-enabled: is where symbolic links virtual host config files are placed
-sudo ln -s /etc/nginx/sites-available/leadering.tech.conf /etc/nginx/sites-enabled/leadering.tech.conf
-sudo rm -rf /etc/nginx/sites-available/default
-# /etc/init.d/nginx restart
-
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+new_string="server_name _;\n\trewrite ^\/redirect_me https://www.youtube.com/watch?v=oT3mCybbhf0 permanent;"
+sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+service nginx start
