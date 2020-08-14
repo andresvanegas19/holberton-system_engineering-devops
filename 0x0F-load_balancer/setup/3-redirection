@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Configure Nginx server so that /redirect_me is redirecting to another page.
+sudo apt-get -y update
+sudo apt-get -y install nginx
+# www is where virtual host site file stored
+# Setting Up The Site Files
+echo "Holberton School" > /var/www/html/index.nginx-debian.html
+new_string="server_name _;\n\trewrite ^\/redirect_me https://www.youtube.com/watch?v=oT3mCybbhf0 permanent;"
+sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
+sudo service nginx start
