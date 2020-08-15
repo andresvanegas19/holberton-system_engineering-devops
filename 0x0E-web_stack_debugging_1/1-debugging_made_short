@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Fix the script to improve the conection in port 80 in less text
+sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default 
+sudo service nginx restart
