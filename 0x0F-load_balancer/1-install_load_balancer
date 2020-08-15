@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Web servers are the piece of software generating and serving HTML pages
+sudo apt-get -y update
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.6
+sudo apt-get -y update
+sudo apt-get -y install haproxy=1.6.\*
+curl 35.196.255.60 | sudo tee /etc/haproxy/haproxy.cfg > /dev/null 2>&1
+sudo service haproxy reload
