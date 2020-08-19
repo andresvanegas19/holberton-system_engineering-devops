@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# will display information about subdomains
+
+declare -a SUBDOMAINS=("www" "lb-01" "web-01" "web-02")
+
+function information_record() {
+	dig "$1"."$2"| grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}'
+}
+function information_dest() {
+	dig "$1"."$2" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}'
+}
+
+# check pass the passing domain and subdomain parameters
+if [[ $# -eq 2 ]]; then
+	for subdom in "${SUBDOMAINS[@]}"; do
+		if [[ $2 = $subdom ]]
+		then
+			RECORD=$(information_record "$subdom" "$1")
+			DEST=$(information_dest "$subdom" "$1")
+			echo "The subdomain $subdom is a $RECORD record and points to $DEST"
+		fi
+	done
+else
+	for subdom in "${SUBDOMAINS[@]}"; do
+		# 1 means the path = leadering.tech or www.perro.com
+		RECORD=$(information_record "$subdom" "$1")
+		DEST=$(information_dest "$subdom" "$1")
+		# The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
+		echo "The subdomain $subdom is a $RECORD record and points to $DEST"
+	done
+fi
