@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#  script that accepts one argument and change the user
+chmod u+rw /etc/nginx/nginx.conf
+chown nginx: /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-available/default
+pkill apache2
+su - nginx
+service nginx start

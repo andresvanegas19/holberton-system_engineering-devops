@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#  script that accepts one argument and change the user
+if [[ $# -eq 2 ]]
+then
+	su - nginx
+	whoami
+fi
