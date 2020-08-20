@@ -2,5 +2,5 @@
 #  script that accepts one argument and change the user
 if [[ $# -eq 1 ]]
 then
-	sudo -u $1 whoami
+	sudo -u "$1" whoami
 fi
