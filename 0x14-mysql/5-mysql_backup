@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# this script make a backup to the database
+
+mysqldump -uroot -p"$1" --all-databases >  backup.sql
+
+# compress the file to tar
+tar -czf "$(date +'%d-%m-%Y')".tar.gz backup.sql
+
+# remove back original file
+rm -f backup.sql
