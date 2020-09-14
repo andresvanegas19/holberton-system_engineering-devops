@@ -18,35 +18,30 @@ def find_info_todo(user_id):
     ).json()
 
     # to print the task
-    tasks_complete = requests.get(
+    tasks_true = requests.get(
         '{}todos?userId={}&completed=true'.format(url, user_id)
-    )
+    ).json()
 
     # the whole tasks
     tasks = requests.get(
         '{}todos?userId={}'.format(url, user_id)
-    )
+    ).json()
 
-
-    tasks_true = json.loads(tasks_complete.text)
-    tasks = json.loads(tasks.text)
-
-    id_user = str(user_name.get('id'))
-
-    result = {id_user: []}
+    result = {user_id: []}
     for task in tasks:
-        result[id_user].append({
+        result[user_id].append({
             "task": task.get('title'),
             "completed": task.get('completed'),
             "username": user_name.get('username')
         })
 
-    name_file = '{}.json'.format(user_name.get('id'))
-
-    with open(name_file, 'w') as json_file:
-        json.dump(result, json_file)
+    return result
 
 
 if __name__ == "__main__":
+    result = {}
     for i in range(1, 10):
-        find_info_todo(i)
+        result.update(find_info_todo(str(i)))
+
+    with open('todo_all_employees.json', 'w') as json_file:
+        json.dump(result, json_file)
