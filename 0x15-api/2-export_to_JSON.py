@@ -4,7 +4,6 @@
 import requests
 import sys
 import json
-import csv
 
 
 if __name__ == "__main__":
@@ -34,7 +33,6 @@ if __name__ == "__main__":
         tasks = json.loads(tasks.text)
 
         id_user = str(user_name.get('id'))
-
 
         result = {id_user: []}
         for task in tasks:
