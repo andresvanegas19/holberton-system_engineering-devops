@@ -16,35 +16,34 @@ if __name__ == "__main__":
 
     if user_id and user_id < 11:
         # to get the user name
-        infor_user = requests.get('{}users/{}'.format(url, user_id))
+        user_name = requests.get(
+            '{}users/{}'.format(url, user_id)
+        ).json()
 
         # to print the task
-        tasks_complete = requests.get(
+        tasks_true = requests.get(
             '{}todos?userId={}&completed=true'.format(url, user_id)
-        )
+        ).json()
 
         # the whole tasks
         tasks = requests.get(
             '{}todos?userId={}'.format(url, user_id)
-        )
-
-        user_name = json.loads(infor_user.text)
-        tasks_true = json.loads(tasks_complete.text)
-        tasks = json.loads(tasks.text)
+        ).json()
 
         row_list = []
 
         for task in tasks:
             row_list.append(
                 [
-                    user_name.get('userId'),
+                    user_id,
                     user_name.get('username'),
                     task.get('completed'),
                     task.get('title')
                 ])
 
         csv.register_dialect(
-            'design', delimiter=',',
+            'design',
+            delimiter=',',
             quoting=csv.QUOTE_ALL,
             quotechar='"'
         )
