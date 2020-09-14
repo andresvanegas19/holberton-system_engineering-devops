@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ Is a script that make a request to  """
 
-import json
+
 import requests
 import sys
 
@@ -16,21 +16,19 @@ if __name__ == "__main__":
 
     if user_id and user_id < 11:
         # to get the user name
-        infor_user = requests.get('{}users/{}'.format(url, user_id))
+        user_name = requests.get(
+            '{}users/{}'.format(url, user_id)
+        ).json().get('name')
 
         # to print the task
-        tasks_complete = requests.get(
+        tasks_true = requests.get(
             '{}todos?userId={}&completed=true'.format(url, user_id)
-        )
+        ).json()
 
         # the whole tasks
         tasks = requests.get(
             '{}todos?userId={}'.format(url, user_id)
-        )
-
-        user_name = json.loads(infor_user.text).get('name')
-        tasks_true = json.loads(tasks_complete.text)
-        tasks = json.loads(tasks.text)
+        ).json()
 
         print('Employee {} is done with tasks({}/{})'.format(
             user_name,
