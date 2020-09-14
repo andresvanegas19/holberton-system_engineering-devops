@@ -29,17 +29,25 @@ if __name__ == "__main__":
             '{}todos?userId={}'.format(url, user_id)
         )
 
-        user_name = json.loads(infor_user.text).get('name')
+        user_name = json.loads(infor_user.text)
         tasks_true = json.loads(tasks_complete.text)
         tasks = json.loads(tasks.text)
 
-        print('Employee {} is done with tasks({}/{})'.format(
-            user_name,
-            len(tasks_true),
-            len(tasks)))
+        id_user = str(user_name.get('id'))
 
-        for task in tasks_true:
-            print("\t {}".format(task.get('title')))
+
+        result = {id_user: []}
+        for task in tasks:
+            result[id_user].append({
+                "task": task.get('title'),
+                "completed": task.get('completed'),
+                "username": user_name.get('username')
+            })
+
+        name_file = '{}.json'.format(user_name.get('id'))
+
+        with open(name_file, 'w') as json_file:
+            json.dump(result, json_file)
 
     else:
         print("Not user with this value")

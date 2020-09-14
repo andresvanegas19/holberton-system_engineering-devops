@@ -50,7 +50,8 @@ if __name__ == "__main__":
             quotechar='"'
         )
 
-        with open('USER_ID.csv', 'w', newline='') as file:
+        name_file = '{}.csv'.format(user_name.get('id'))
+        with open(name_file, 'w', newline='') as file:
             writer = csv.writer(file, dialect='design')
             writer.writerows(row_list)
 

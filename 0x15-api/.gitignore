@@ -1,3 +1,5 @@
 env
 USER_ID.csv
 test.json
+*.csv
+*.json
