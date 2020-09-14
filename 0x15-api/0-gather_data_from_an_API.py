@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """ Is a script that make a request to  """
 
+import json
 import requests
 import sys
-import json
-import csv
 
 
 if __name__ == "__main__":

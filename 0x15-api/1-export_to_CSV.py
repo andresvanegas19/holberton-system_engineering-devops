@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """ Is a script that make a request to save into csv """
 
+import csv
 import requests
 import sys
-import json
-import csv
 
 
 if __name__ == "__main__":

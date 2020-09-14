@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """ Is a script that make a request to JSON """
 
-import requests
+
 import json
-import csv
+import requests
+import sys
 
 
 def find_info_todo(user_id):
