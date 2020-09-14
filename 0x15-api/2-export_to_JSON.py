@@ -43,7 +43,7 @@ if __name__ == "__main__":
                 "username": user_name.get('username')
             })
 
-        name_file = '{}.json'.format(user_name.get('id'))
+        name_file = '{}.json'.format(user_id)
 
         with open(name_file, 'w') as json_file:
             json.dump(result, json_file)

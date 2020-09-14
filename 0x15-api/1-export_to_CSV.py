@@ -37,7 +37,7 @@ if __name__ == "__main__":
         for task in tasks:
             row_list.append(
                 [
-                    user_name.get('id'),
+                    user_name.get('userId'),
                     user_name.get('username'),
                     task.get('completed'),
                     task.get('title')
@@ -49,7 +49,7 @@ if __name__ == "__main__":
             quotechar='"'
         )
 
-        name_file = '{}.csv'.format(user_name.get('id'))
+        name_file = '{}.csv'.format(user_id)
         with open(name_file, 'w', newline='') as file:
             writer = csv.writer(file, dialect='design')
             writer.writerows(row_list)
