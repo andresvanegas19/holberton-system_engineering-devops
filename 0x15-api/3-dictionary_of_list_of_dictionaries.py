@@ -30,9 +30,9 @@ def find_info_todo(user_id):
     result = {user_id: []}
     for task in tasks:
         result[user_id].append({
+            "username": user_name.get('username'),
             "task": task.get('title'),
             "completed": task.get('completed'),
-            "username": user_name.get('username')
         })
 
     return result
