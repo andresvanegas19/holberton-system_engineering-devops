@@ -34,6 +34,7 @@ def find_info_todo(user_id):
 
 
 if __name__ == "__main__":
+
     result = {}
     for i in range(1, 11):
         result.update(find_info_todo(str(i)))

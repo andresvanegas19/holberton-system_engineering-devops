@@ -77,3 +77,4 @@ flycheck_*.el
 *~
 a.out
 *main.c
+*main.py
