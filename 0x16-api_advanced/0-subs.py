@@ -8,7 +8,7 @@ import requests
 def number_of_subscribers(subreddit):
     """ This function the porpouse is to request the information
     of the webpage and give the details of the result
-    :return the """
+    :return the result"""
     headers = {
         'User-Agent': 'My User Agent 1.0',
         'From': 'andressantiagore@gmail.com',
@@ -16,8 +16,10 @@ def number_of_subscribers(subreddit):
 
     url = 'https://www.reddit.com/r/{}/about.json'.format(subreddit)
     r = requests.get(url=url, headers=headers)
+    if r.status_code == 302:
+        return 0
     r = r.json()
-    if r.get('error') == 404 or r.get('kind') == 'Listing':
+    if r.get('kind') == 'Listing':
         return 0
 
     return r.get('data').get('subscribers')

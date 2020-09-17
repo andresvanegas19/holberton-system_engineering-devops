@@ -3,13 +3,25 @@
 An script to request the information about reddit and make statisct
 """
 import requests
-import sys
 
 headers = {
     'User-Agent': 'My User Agent 1.0',
     'From': 'andressantiagore@gmail.com',
 }
 
-url = 'https://www.reddit.com/r/{}/about.json'.format(sys.argv[1])
-r = requests.get(url=url, headers=headers, allow_redirects=False)
-print(r.status_code == 302)
+
+def top_ten(subreddit):
+    """ This function will return the most 10 top post from reddit
+    it not return nothing"""
+    url = 'https://www.reddit.com/r/{}/top/.json?limit=10'.format(subreddit)
+    r = requests.get(url=url, headers=headers, allow_redirects=False)
+    if r.status_code == 302:
+        print("None")
+        return None
+    posts = r.json()
+
+    if not posts.get("data").get("children"):
+        print("None")
+        return None
+    for dictionary in posts.get("data").get("children"):
+        print(dictionary.get('data').get('title'))
