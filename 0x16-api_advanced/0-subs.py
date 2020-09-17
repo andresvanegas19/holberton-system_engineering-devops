@@ -19,7 +19,7 @@ def number_of_subscribers(subreddit):
     if r.status_code == 302:
         return 0
     r = r.json()
-    if r.get('kind') == 'Listing':
+    if r.get('error') is None:
         return 0
 
     return r.get('data').get('subscribers')
